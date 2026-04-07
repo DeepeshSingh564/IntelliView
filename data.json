@@ -1,0 +1,2987 @@
+[
+{
+  "model": "interview.role",
+  "pk": 1,
+  "fields": {
+    "name": "Frontend Developer",
+    "slug": "frontend-developer",
+    "description": "",
+    "created_at": "2025-08-29T20:53:28.753Z"
+  }
+},
+{
+  "model": "interview.role",
+  "pk": 2,
+  "fields": {
+    "name": "Backend Developer",
+    "slug": "backend-developer",
+    "description": "",
+    "created_at": "2025-08-29T20:53:28.767Z"
+  }
+},
+{
+  "model": "interview.role",
+  "pk": 3,
+  "fields": {
+    "name": "Data Scientist",
+    "slug": "data-scientist",
+    "description": "",
+    "created_at": "2025-08-29T20:53:28.787Z"
+  }
+},
+{
+  "model": "interview.role",
+  "pk": 4,
+  "fields": {
+    "name": "DevOps Engineer",
+    "slug": "devops-engineer",
+    "description": "",
+    "created_at": "2025-08-29T20:53:28.793Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 1,
+  "fields": {
+    "role": 2,
+    "text": "What is the difference between monolithic and microservices architecture?",
+    "difficulty": "medium",
+    "keywords": [
+      "monolithic",
+      "microservices",
+      "architecture"
+    ],
+    "created_at": "2025-08-29T21:17:51.836Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 2,
+  "fields": {
+    "role": 2,
+    "text": "Explain the role of an API gateway in backend systems.",
+    "difficulty": "hard",
+    "keywords": [
+      "API Gateway",
+      "routing",
+      "security"
+    ],
+    "created_at": "2025-08-29T21:17:51.874Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 3,
+  "fields": {
+    "role": 2,
+    "text": "What are common HTTP methods and when are they used?",
+    "difficulty": "easy",
+    "keywords": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    "created_at": "2025-08-29T21:17:51.898Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 4,
+  "fields": {
+    "role": 2,
+    "text": "How do you optimize database queries for performance?",
+    "difficulty": "hard",
+    "keywords": [
+      "indexing",
+      "joins",
+      "query optimization"
+    ],
+    "created_at": "2025-08-29T21:17:51.920Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 5,
+  "fields": {
+    "role": 2,
+    "text": "What is connection pooling and why is it useful?",
+    "difficulty": "medium",
+    "keywords": [
+      "connection pooling",
+      "database",
+      "performance"
+    ],
+    "created_at": "2025-08-29T21:17:51.935Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 6,
+  "fields": {
+    "role": 2,
+    "text": "Explain REST vs GraphQL APIs.",
+    "difficulty": "medium",
+    "keywords": [
+      "REST",
+      "GraphQL",
+      "APIs"
+    ],
+    "created_at": "2025-08-29T21:17:51.954Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 7,
+  "fields": {
+    "role": 2,
+    "text": "What strategies do you use for caching in backend systems?",
+    "difficulty": "hard",
+    "keywords": [
+      "caching",
+      "Redis",
+      "performance"
+    ],
+    "created_at": "2025-08-29T21:17:51.974Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 8,
+  "fields": {
+    "role": 2,
+    "text": "How does authentication differ from authorization?",
+    "difficulty": "easy",
+    "keywords": [
+      "authentication",
+      "authorization",
+      "security"
+    ],
+    "created_at": "2025-08-29T21:17:52.006Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 9,
+  "fields": {
+    "role": 2,
+    "text": "Explain eventual consistency in distributed systems.",
+    "difficulty": "hard",
+    "keywords": [
+      "eventual consistency",
+      "distributed systems"
+    ],
+    "created_at": "2025-08-29T21:17:52.026Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 10,
+  "fields": {
+    "role": 2,
+    "text": "What are common backend scalability challenges?",
+    "difficulty": "medium",
+    "keywords": [
+      "scalability",
+      "load balancing",
+      "bottlenecks"
+    ],
+    "created_at": "2025-08-29T21:17:52.041Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 11,
+  "fields": {
+    "role": 3,
+    "text": "What is the difference between supervised and unsupervised learning?",
+    "difficulty": "easy",
+    "keywords": [
+      "supervised",
+      "unsupervised",
+      "machine learning"
+    ],
+    "created_at": "2025-08-29T21:17:52.056Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 12,
+  "fields": {
+    "role": 3,
+    "text": "Explain overfitting and underfitting in ML models.",
+    "difficulty": "medium",
+    "keywords": [
+      "overfitting",
+      "underfitting",
+      "bias variance"
+    ],
+    "created_at": "2025-08-29T21:17:52.071Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 13,
+  "fields": {
+    "role": 3,
+    "text": "What are common feature selection techniques?",
+    "difficulty": "hard",
+    "keywords": [
+      "feature selection",
+      "PCA",
+      "regularization"
+    ],
+    "created_at": "2025-08-29T21:17:52.083Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 14,
+  "fields": {
+    "role": 3,
+    "text": "How do you handle missing data in datasets?",
+    "difficulty": "medium",
+    "keywords": [
+      "missing data",
+      "imputation",
+      "dropna"
+    ],
+    "created_at": "2025-08-29T21:17:52.102Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 15,
+  "fields": {
+    "role": 3,
+    "text": "Explain precision, recall, and F1-score.",
+    "difficulty": "easy",
+    "keywords": [
+      "precision",
+      "recall",
+      "F1 score"
+    ],
+    "created_at": "2025-08-29T21:17:52.124Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 16,
+  "fields": {
+    "role": 3,
+    "text": "What is the difference between bagging and boosting?",
+    "difficulty": "medium",
+    "keywords": [
+      "bagging",
+      "boosting",
+      "ensemble methods"
+    ],
+    "created_at": "2025-08-29T21:17:52.148Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 17,
+  "fields": {
+    "role": 3,
+    "text": "How does gradient descent work?",
+    "difficulty": "easy",
+    "keywords": [
+      "gradient descent",
+      "optimization",
+      "loss function"
+    ],
+    "created_at": "2025-08-29T21:17:52.211Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 18,
+  "fields": {
+    "role": 3,
+    "text": "What is regularization and why is it important?",
+    "difficulty": "medium",
+    "keywords": [
+      "regularization",
+      "L1",
+      "L2"
+    ],
+    "created_at": "2025-08-29T21:17:52.224Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 19,
+  "fields": {
+    "role": 3,
+    "text": "Explain the bias-variance tradeoff.",
+    "difficulty": "hard",
+    "keywords": [
+      "bias",
+      "variance",
+      "tradeoff"
+    ],
+    "created_at": "2025-08-29T21:17:52.237Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 20,
+  "fields": {
+    "role": 3,
+    "text": "How do you evaluate the performance of a clustering algorithm?",
+    "difficulty": "hard",
+    "keywords": [
+      "clustering",
+      "silhouette score",
+      "evaluation"
+    ],
+    "created_at": "2025-08-29T21:17:52.250Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 21,
+  "fields": {
+    "role": 4,
+    "text": "What is the difference between continuous integration and continuous deployment?",
+    "difficulty": "easy",
+    "keywords": [
+      "CI",
+      "CD",
+      "DevOps"
+    ],
+    "created_at": "2025-08-29T21:17:52.268Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 22,
+  "fields": {
+    "role": 4,
+    "text": "Explain the concept of Infrastructure as Code (IaC).",
+    "difficulty": "medium",
+    "keywords": [
+      "Infrastructure as Code",
+      "Terraform",
+      "Ansible"
+    ],
+    "created_at": "2025-08-29T21:17:52.288Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 23,
+  "fields": {
+    "role": 4,
+    "text": "How does Docker differ from virtual machines?",
+    "difficulty": "easy",
+    "keywords": [
+      "Docker",
+      "containers",
+      "VMs"
+    ],
+    "created_at": "2025-08-29T21:17:52.312Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 24,
+  "fields": {
+    "role": 4,
+    "text": "What are Kubernetes pods and deployments?",
+    "difficulty": "medium",
+    "keywords": [
+      "Kubernetes",
+      "pods",
+      "deployments"
+    ],
+    "created_at": "2025-08-29T21:17:52.352Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 25,
+  "fields": {
+    "role": 4,
+    "text": "How do you monitor system performance in production?",
+    "difficulty": "hard",
+    "keywords": [
+      "monitoring",
+      "Prometheus",
+      "Grafana"
+    ],
+    "created_at": "2025-08-29T21:17:52.470Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 26,
+  "fields": {
+    "role": 4,
+    "text": "What is load balancing and why is it important?",
+    "difficulty": "easy",
+    "keywords": [
+      "load balancing",
+      "HAProxy",
+      "scalability"
+    ],
+    "created_at": "2025-08-29T21:17:52.531Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 27,
+  "fields": {
+    "role": 4,
+    "text": "How do you implement zero-downtime deployments?",
+    "difficulty": "hard",
+    "keywords": [
+      "zero-downtime",
+      "blue-green deployment",
+      "rolling updates"
+    ],
+    "created_at": "2025-08-29T21:17:52.554Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 28,
+  "fields": {
+    "role": 4,
+    "text": "What are common security practices in DevOps?",
+    "difficulty": "medium",
+    "keywords": [
+      "DevSecOps",
+      "secrets management",
+      "firewalls"
+    ],
+    "created_at": "2025-08-29T21:17:52.567Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 29,
+  "fields": {
+    "role": 4,
+    "text": "Explain the use of CI/CD pipelines.",
+    "difficulty": "medium",
+    "keywords": [
+      "pipelines",
+      "Jenkins",
+      "GitHub Actions"
+    ],
+    "created_at": "2025-08-29T21:17:52.580Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 30,
+  "fields": {
+    "role": 4,
+    "text": "How do you handle logging and alerting?",
+    "difficulty": "hard",
+    "keywords": [
+      "logging",
+      "ELK stack",
+      "alerts"
+    ],
+    "created_at": "2025-08-29T21:17:52.610Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 31,
+  "fields": {
+    "role": 1,
+    "text": "What is the difference between HTML, CSS, and JavaScript?",
+    "difficulty": "easy",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "created_at": "2025-08-29T21:17:52.636Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 32,
+  "fields": {
+    "role": 1,
+    "text": "Explain how the virtual DOM works in React.",
+    "difficulty": "medium",
+    "keywords": [
+      "virtual DOM",
+      "React",
+      "reconciliation"
+    ],
+    "created_at": "2025-08-29T21:17:52.654Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 33,
+  "fields": {
+    "role": 1,
+    "text": "What are React hooks and when would you use them?",
+    "difficulty": "medium",
+    "keywords": [
+      "hooks",
+      "useState",
+      "useEffect"
+    ],
+    "created_at": "2025-08-29T21:17:52.678Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 34,
+  "fields": {
+    "role": 1,
+    "text": "How do you optimize performance in large React apps?",
+    "difficulty": "hard",
+    "keywords": [
+      "performance",
+      "memoization",
+      "code splitting"
+    ],
+    "created_at": "2025-08-29T21:17:52.696Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 35,
+  "fields": {
+    "role": 1,
+    "text": "What is responsive design and how do you implement it?",
+    "difficulty": "easy",
+    "keywords": [
+      "responsive design",
+      "media queries",
+      "CSS"
+    ],
+    "created_at": "2025-08-29T21:17:52.724Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 36,
+  "fields": {
+    "role": 1,
+    "text": "Explain CSS flexbox and grid systems.",
+    "difficulty": "medium",
+    "keywords": [
+      "flexbox",
+      "grid",
+      "layout"
+    ],
+    "created_at": "2025-08-29T21:17:52.749Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 37,
+  "fields": {
+    "role": 1,
+    "text": "What are common differences between client-side and server-side rendering?",
+    "difficulty": "medium",
+    "keywords": [
+      "CSR",
+      "SSR",
+      "rendering"
+    ],
+    "created_at": "2025-08-29T21:17:52.769Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 38,
+  "fields": {
+    "role": 1,
+    "text": "How do you handle state management in frontend apps?",
+    "difficulty": "hard",
+    "keywords": [
+      "state management",
+      "Redux",
+      "Context API"
+    ],
+    "created_at": "2025-08-29T21:17:52.787Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 39,
+  "fields": {
+    "role": 1,
+    "text": "What are web accessibility best practices?",
+    "difficulty": "medium",
+    "keywords": [
+      "accessibility",
+      "ARIA",
+      "WCAG"
+    ],
+    "created_at": "2025-08-29T21:17:52.799Z"
+  }
+},
+{
+  "model": "interview.question",
+  "pk": 40,
+  "fields": {
+    "role": 1,
+    "text": "Explain the concept of progressive web apps (PWA).",
+    "difficulty": "hard",
+    "keywords": [
+      "PWA",
+      "offline support",
+      "service workers"
+    ],
+    "created_at": "2025-08-29T21:17:52.811Z"
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 1,
+  "fields": {
+    "user_session": "fcb3a06bed72bc3a",
+    "role": 2,
+    "started_at": "2025-08-29T21:09:10.006Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 2,
+  "fields": {
+    "user_session": "862a653b66c2c874",
+    "role": 1,
+    "started_at": "2025-08-29T21:14:51.301Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 3,
+  "fields": {
+    "user_session": "5ddd4b7414b491f5",
+    "role": 4,
+    "started_at": "2025-08-29T21:14:55.570Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 4,
+  "fields": {
+    "user_session": "853703cc44f70070",
+    "role": 2,
+    "started_at": "2025-08-29T21:18:12.688Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 5,
+  "fields": {
+    "user_session": "c63a0446fdbe07f2",
+    "role": 2,
+    "started_at": "2025-08-29T21:18:25.484Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 6,
+  "fields": {
+    "user_session": "1dc77737c5c69bef",
+    "role": 2,
+    "started_at": "2025-08-29T21:30:16.725Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 7,
+  "fields": {
+    "user_session": "fa304be4258a004e",
+    "role": 2,
+    "started_at": "2025-08-29T21:30:39.722Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 8,
+  "fields": {
+    "user_session": "9e44cb8869221718",
+    "role": 2,
+    "started_at": "2025-08-29T21:32:16.722Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 9,
+  "fields": {
+    "user_session": "42d45aef98991f3b",
+    "role": 2,
+    "started_at": "2025-08-29T21:34:05.552Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 10,
+  "fields": {
+    "user_session": "52779275d029a7e4",
+    "role": 2,
+    "started_at": "2025-08-29T21:41:40.050Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 11,
+  "fields": {
+    "user_session": "c02a512fa0071433",
+    "role": 2,
+    "started_at": "2025-08-29T21:43:45.999Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 12,
+  "fields": {
+    "user_session": "c32fa56b321bf344",
+    "role": 2,
+    "started_at": "2025-08-29T21:46:31.569Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 13,
+  "fields": {
+    "user_session": "5396ce14267ae09b",
+    "role": 2,
+    "started_at": "2025-08-29T21:48:27.590Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 14,
+  "fields": {
+    "user_session": "7e247b880f071d7c",
+    "role": 2,
+    "started_at": "2025-08-29T21:48:51.331Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 15,
+  "fields": {
+    "user_session": "897657e4ec448f3b",
+    "role": 2,
+    "started_at": "2025-08-29T22:06:27.619Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 16,
+  "fields": {
+    "user_session": "d585099144b6d798",
+    "role": 2,
+    "started_at": "2025-08-29T22:10:45.848Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 17,
+  "fields": {
+    "user_session": "c9157bfdac0cab43",
+    "role": 2,
+    "started_at": "2025-08-29T22:15:45.229Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 18,
+  "fields": {
+    "user_session": "41629807145ff1b0",
+    "role": 2,
+    "started_at": "2025-08-29T22:15:56.595Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 19,
+  "fields": {
+    "user_session": "0c0382e0c34709ed",
+    "role": 2,
+    "started_at": "2025-08-29T22:20:38.431Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 20,
+  "fields": {
+    "user_session": "172f33334eadeed4",
+    "role": 2,
+    "started_at": "2025-08-29T22:23:55.027Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 21,
+  "fields": {
+    "user_session": "552092067d50ffbe",
+    "role": 2,
+    "started_at": "2025-08-29T22:29:24.207Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 22,
+  "fields": {
+    "user_session": "11771a8b027e242d",
+    "role": 2,
+    "started_at": "2025-08-29T22:33:54.454Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 23,
+  "fields": {
+    "user_session": "6a622ae8fb8c8e5b",
+    "role": 1,
+    "started_at": "2025-08-29T22:36:35.026Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 24,
+  "fields": {
+    "user_session": "85010f36f14b2600",
+    "role": 1,
+    "started_at": "2025-08-29T22:46:57.363Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 25,
+  "fields": {
+    "user_session": "e5f703affbf73013",
+    "role": 1,
+    "started_at": "2025-08-29T22:49:49.328Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 26,
+  "fields": {
+    "user_session": "6fc583b5497b134a",
+    "role": 1,
+    "started_at": "2025-08-29T22:51:34.873Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 27,
+  "fields": {
+    "user_session": "05b64ac9e1f6a640",
+    "role": 1,
+    "started_at": "2025-08-29T23:00:33.944Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 28,
+  "fields": {
+    "user_session": "8ea528d66c24f633",
+    "role": 1,
+    "started_at": "2025-08-30T16:30:57.912Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.session",
+  "pk": 29,
+  "fields": {
+    "user_session": "66a034e324a427b2",
+    "role": 1,
+    "started_at": "2025-09-10T19:06:46.905Z",
+    "ended_at": null
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 1,
+  "fields": {
+    "session": 4,
+    "question": 10,
+    "user_session": "853703cc44f70070",
+    "answer_text": "askfjdh",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:18:16.904Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 2,
+  "fields": {
+    "session": 5,
+    "question": 10,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "fosijdflskdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:18:29.376Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 3,
+  "fields": {
+    "session": 5,
+    "question": 9,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "jhfghffdg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:19:32.335Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 4,
+  "fields": {
+    "session": 5,
+    "question": 8,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "goisdiusdoifjk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:20:31.769Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 5,
+  "fields": {
+    "session": 5,
+    "question": 7,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "slkfjdslkjfsklfsfsjk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:20:58.973Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 6,
+  "fields": {
+    "session": 5,
+    "question": 6,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "sfkljsnfklsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:05.654Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 7,
+  "fields": {
+    "session": 5,
+    "question": 5,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "sfisf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:24.525Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 8,
+  "fields": {
+    "session": 5,
+    "question": 4,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "sdifjsdf\\",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:32.201Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 9,
+  "fields": {
+    "session": 5,
+    "question": 3,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "sfiojsfsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:38.829Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 10,
+  "fields": {
+    "session": 5,
+    "question": 2,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "fspoifjsdof",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:44.330Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 11,
+  "fields": {
+    "session": 5,
+    "question": 1,
+    "user_session": "c63a0446fdbe07f2",
+    "answer_text": "sfijsdjf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:21:49.886Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 12,
+  "fields": {
+    "session": 7,
+    "question": 10,
+    "user_session": "fa304be4258a004e",
+    "answer_text": "dsifjsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:30:44.188Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 13,
+  "fields": {
+    "session": 8,
+    "question": 10,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "ergiotrjhfn",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:32:19.934Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 14,
+  "fields": {
+    "session": 8,
+    "question": 9,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "fjsdfkdsfds",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:32:27.615Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 15,
+  "fields": {
+    "session": 8,
+    "question": 8,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "sdjffkl",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:32:36.791Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 16,
+  "fields": {
+    "session": 8,
+    "question": 7,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "dd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:32:44.123Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 17,
+  "fields": {
+    "session": 8,
+    "question": 6,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "python",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Covered keywords: python. Try structuring in 2–3 sentences with examples.",
+    "score": 1,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:32:52.843Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 18,
+  "fields": {
+    "session": 8,
+    "question": 5,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "python",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Covered keywords: python. Try structuring in 2–3 sentences with examples.",
+    "score": 1,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:33:01.920Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 19,
+  "fields": {
+    "session": 8,
+    "question": 4,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "dsfd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:33:08.938Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 20,
+  "fields": {
+    "session": 8,
+    "question": 3,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "fsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:33:16.605Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 21,
+  "fields": {
+    "session": 8,
+    "question": 2,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "dsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:33:22.961Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 22,
+  "fields": {
+    "session": 8,
+    "question": 1,
+    "user_session": "9e44cb8869221718",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:33:31.441Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 23,
+  "fields": {
+    "session": 10,
+    "question": 10,
+    "user_session": "52779275d029a7e4",
+    "answer_text": "iuguh",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:41:43.644Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 24,
+  "fields": {
+    "session": 10,
+    "question": 9,
+    "user_session": "52779275d029a7e4",
+    "answer_text": "iuguh",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:41:57.376Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 25,
+  "fields": {
+    "session": 11,
+    "question": 10,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "ukghjk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:43:54.058Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 26,
+  "fields": {
+    "session": 11,
+    "question": 9,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "uih",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:01.652Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 27,
+  "fields": {
+    "session": 11,
+    "question": 8,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "yfj",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:05.330Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 28,
+  "fields": {
+    "session": 11,
+    "question": 7,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "fhj",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:12.364Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 29,
+  "fields": {
+    "session": 11,
+    "question": 6,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "yutyu",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:24.619Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 30,
+  "fields": {
+    "session": 11,
+    "question": 5,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "uitug",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:27.883Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 31,
+  "fields": {
+    "session": 11,
+    "question": 4,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "ugu",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:31.207Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 32,
+  "fields": {
+    "session": 11,
+    "question": 3,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "uitygujh",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:34.600Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 33,
+  "fields": {
+    "session": 11,
+    "question": 2,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "uitgiyujh",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:38.148Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 34,
+  "fields": {
+    "session": 11,
+    "question": 1,
+    "user_session": "c02a512fa0071433",
+    "answer_text": "78ty",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:44:47.714Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 35,
+  "fields": {
+    "session": 12,
+    "question": 10,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "uhj",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:46:40.175Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 36,
+  "fields": {
+    "session": 12,
+    "question": 9,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "fvsdv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:12.233Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 37,
+  "fields": {
+    "session": 12,
+    "question": 8,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "greg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:20.839Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 38,
+  "fields": {
+    "session": 12,
+    "question": 7,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "dfsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:27.219Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 39,
+  "fields": {
+    "session": 12,
+    "question": 6,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "gegdef",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:35.224Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 40,
+  "fields": {
+    "session": 12,
+    "question": 5,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "gfs",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:43.793Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 41,
+  "fields": {
+    "session": 12,
+    "question": 4,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "fsdffs",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:50.760Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 42,
+  "fields": {
+    "session": 12,
+    "question": 3,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "fsfsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:47:57.364Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 43,
+  "fields": {
+    "session": 12,
+    "question": 2,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "sdfdsfsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:48:04.804Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 44,
+  "fields": {
+    "session": 12,
+    "question": 1,
+    "user_session": "c32fa56b321bf344",
+    "answer_text": "dsfwef",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:48:12.781Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 45,
+  "fields": {
+    "session": 13,
+    "question": 10,
+    "user_session": "5396ce14267ae09b",
+    "answer_text": "ddddddddd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:48:32.899Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 46,
+  "fields": {
+    "session": 13,
+    "question": 9,
+    "user_session": "5396ce14267ae09b",
+    "answer_text": "sdfsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:48:41.160Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 47,
+  "fields": {
+    "session": 14,
+    "question": 10,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:48:57.498Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 48,
+  "fields": {
+    "session": 14,
+    "question": 9,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "fsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:00.931Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 49,
+  "fields": {
+    "session": 14,
+    "question": 8,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "sdfdsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:04.392Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 50,
+  "fields": {
+    "session": 14,
+    "question": 7,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "fsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:14.498Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 51,
+  "fields": {
+    "session": 14,
+    "question": 6,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "dfrs",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:18.754Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 52,
+  "fields": {
+    "session": 14,
+    "question": 5,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:22.318Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 53,
+  "fields": {
+    "session": 14,
+    "question": 4,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:26.484Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 54,
+  "fields": {
+    "session": 14,
+    "question": 3,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "dfsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:30.075Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 55,
+  "fields": {
+    "session": 14,
+    "question": 2,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "dfdsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:36.895Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 56,
+  "fields": {
+    "session": 14,
+    "question": 1,
+    "user_session": "7e247b880f071d7c",
+    "answer_text": "dfssdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T21:49:41.589Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 57,
+  "fields": {
+    "session": 19,
+    "question": 10,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "fsdfsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:20:43.173Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 58,
+  "fields": {
+    "session": 19,
+    "question": 9,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "sfsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:20:49.183Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 59,
+  "fields": {
+    "session": 19,
+    "question": 8,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "dsfsd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:20:53.496Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 60,
+  "fields": {
+    "session": 19,
+    "question": 7,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "dfs",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:20:57.728Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 61,
+  "fields": {
+    "session": 19,
+    "question": 6,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:01.369Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 62,
+  "fields": {
+    "session": 19,
+    "question": 5,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "xvx",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:05.231Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 63,
+  "fields": {
+    "session": 19,
+    "question": 4,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "vdsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:09.360Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 64,
+  "fields": {
+    "session": 19,
+    "question": 3,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "dsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:12.995Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 65,
+  "fields": {
+    "session": 19,
+    "question": 2,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:16.360Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 66,
+  "fields": {
+    "session": 19,
+    "question": 1,
+    "user_session": "0c0382e0c34709ed",
+    "answer_text": "vdsv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:21:21.172Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 67,
+  "fields": {
+    "session": 20,
+    "question": 10,
+    "user_session": "172f33334eadeed4",
+    "answer_text": "dsfsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:24:03.251Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 68,
+  "fields": {
+    "session": 23,
+    "question": 40,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgdfg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:36:40.991Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 69,
+  "fields": {
+    "session": 23,
+    "question": 39,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgxv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:36:47.552Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 70,
+  "fields": {
+    "session": 23,
+    "question": 38,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgdfg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:36:54.914Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 71,
+  "fields": {
+    "session": 23,
+    "question": 37,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgsdg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:02.409Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 72,
+  "fields": {
+    "session": 23,
+    "question": 36,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgdsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:11.135Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 73,
+  "fields": {
+    "session": 23,
+    "question": 35,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "fgxfgv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:17.412Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 74,
+  "fields": {
+    "session": 23,
+    "question": 34,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfvcxv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:24.604Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 75,
+  "fields": {
+    "session": 23,
+    "question": 33,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfgxv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:31.173Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 76,
+  "fields": {
+    "session": 23,
+    "question": 32,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dfbvfc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:39.709Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 77,
+  "fields": {
+    "session": 23,
+    "question": 31,
+    "user_session": "6a622ae8fb8c8e5b",
+    "answer_text": "dgdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:37:47.357Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 78,
+  "fields": {
+    "session": 24,
+    "question": 40,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "dsg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:05.475Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 79,
+  "fields": {
+    "session": 24,
+    "question": 39,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "cxvxv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:14.123Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 80,
+  "fields": {
+    "session": 24,
+    "question": 38,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "dgdfx",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:20.433Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 81,
+  "fields": {
+    "session": 24,
+    "question": 37,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "ggds",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:26.861Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 82,
+  "fields": {
+    "session": 24,
+    "question": 36,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "hncb",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:32.578Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 83,
+  "fields": {
+    "session": 24,
+    "question": 35,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "cf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:40.613Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 84,
+  "fields": {
+    "session": 24,
+    "question": 34,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "fgd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:46.814Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 85,
+  "fields": {
+    "session": 24,
+    "question": 33,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "cfgcfv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:53.373Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 86,
+  "fields": {
+    "session": 24,
+    "question": 32,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "fbv",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:47:59.385Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 87,
+  "fields": {
+    "session": 24,
+    "question": 31,
+    "user_session": "85010f36f14b2600",
+    "answer_text": "dfgfd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:48:06.122Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 88,
+  "fields": {
+    "session": 25,
+    "question": 40,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:49:52.562Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 89,
+  "fields": {
+    "session": 25,
+    "question": 39,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "xczxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:49:57.559Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 90,
+  "fields": {
+    "session": 25,
+    "question": 38,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "xczxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:02.909Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 91,
+  "fields": {
+    "session": 25,
+    "question": 37,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "zxczx",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:09.745Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 92,
+  "fields": {
+    "session": 25,
+    "question": 36,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "czxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:15.717Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 93,
+  "fields": {
+    "session": 25,
+    "question": 35,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "xzcxzc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:23.569Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 94,
+  "fields": {
+    "session": 25,
+    "question": 34,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "zxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:30.072Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 95,
+  "fields": {
+    "session": 25,
+    "question": 33,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "zxczxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:37.328Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 96,
+  "fields": {
+    "session": 25,
+    "question": 32,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "czxc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:43.321Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 97,
+  "fields": {
+    "session": 25,
+    "question": 31,
+    "user_session": "e5f703affbf73013",
+    "answer_text": "cxzcxz",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:50:54.310Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 98,
+  "fields": {
+    "session": 26,
+    "question": 40,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:37.535Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 99,
+  "fields": {
+    "session": 26,
+    "question": 39,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "ef",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:41.397Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 100,
+  "fields": {
+    "session": 26,
+    "question": 38,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "sdfds",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:45.292Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 101,
+  "fields": {
+    "session": 26,
+    "question": 37,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:48.915Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 102,
+  "fields": {
+    "session": 26,
+    "question": 36,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "d",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:51.724Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 103,
+  "fields": {
+    "session": 26,
+    "question": 35,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "de",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:54.165Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 104,
+  "fields": {
+    "session": 26,
+    "question": 34,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "d",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:51:56.811Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 105,
+  "fields": {
+    "session": 26,
+    "question": 33,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "d",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:52:00.367Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 106,
+  "fields": {
+    "session": 26,
+    "question": 32,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "dd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:52:03.103Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 107,
+  "fields": {
+    "session": 26,
+    "question": 31,
+    "user_session": "6fc583b5497b134a",
+    "answer_text": "dd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T22:52:06.346Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 108,
+  "fields": {
+    "session": 27,
+    "question": 40,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "eroigjdfg",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:39.654Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 109,
+  "fields": {
+    "session": 27,
+    "question": 39,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "sfds",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:43.983Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 110,
+  "fields": {
+    "session": 27,
+    "question": 38,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "fsdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:46.941Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 111,
+  "fields": {
+    "session": 27,
+    "question": 37,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "fd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:49.341Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 112,
+  "fields": {
+    "session": 27,
+    "question": 36,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "dsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:53.254Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 113,
+  "fields": {
+    "session": 27,
+    "question": 35,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:55.606Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 114,
+  "fields": {
+    "session": 27,
+    "question": 34,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "dsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:00:58.169Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 115,
+  "fields": {
+    "session": 27,
+    "question": 33,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:01:00.763Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 116,
+  "fields": {
+    "session": 27,
+    "question": 32,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:01:03.073Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 117,
+  "fields": {
+    "session": 27,
+    "question": 31,
+    "user_session": "05b64ac9e1f6a640",
+    "answer_text": "df",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-29T23:01:06.500Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 118,
+  "fields": {
+    "session": 28,
+    "question": 40,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "wee",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:04.539Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 119,
+  "fields": {
+    "session": 28,
+    "question": 39,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "fddf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:13.119Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 120,
+  "fields": {
+    "session": 28,
+    "question": 38,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "sdf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:21.006Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 121,
+  "fields": {
+    "session": 28,
+    "question": 37,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "dsf",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:29.851Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 122,
+  "fields": {
+    "session": 28,
+    "question": 36,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "sfd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:39.602Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 123,
+  "fields": {
+    "session": 28,
+    "question": 35,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "efd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:48.350Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 124,
+  "fields": {
+    "session": 28,
+    "question": 34,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "rfd",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:31:57.680Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 125,
+  "fields": {
+    "session": 28,
+    "question": 33,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "edfs",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:32:07.151Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 126,
+  "fields": {
+    "session": 28,
+    "question": 32,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "v",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:32:18.090Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 127,
+  "fields": {
+    "session": 28,
+    "question": 31,
+    "user_session": "8ea528d66c24f633",
+    "answer_text": "dc",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-08-30T16:32:29.762Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 128,
+  "fields": {
+    "session": 29,
+    "question": 40,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "kk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:06:53.684Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 129,
+  "fields": {
+    "session": 29,
+    "question": 39,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "kk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:01.933Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 130,
+  "fields": {
+    "session": 29,
+    "question": 38,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "kk",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:08.864Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 131,
+  "fields": {
+    "session": 29,
+    "question": 37,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "jjjjjj",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:20.037Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 132,
+  "fields": {
+    "session": 29,
+    "question": 36,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "mmmmmm",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:28.311Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 133,
+  "fields": {
+    "session": 29,
+    "question": 35,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "mmmm",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:36.915Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 134,
+  "fields": {
+    "session": 29,
+    "question": 34,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "mmmm",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:46.434Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 135,
+  "fields": {
+    "session": 29,
+    "question": 33,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "k,,,,",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:07:55.417Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 136,
+  "fields": {
+    "session": 29,
+    "question": 32,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "m,m",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:08:04.349Z"
+  }
+},
+{
+  "model": "interview.attempt",
+  "pk": 137,
+  "fields": {
+    "session": 29,
+    "question": 31,
+    "user_session": "66a034e324a427b2",
+    "answer_text": "mmm",
+    "feedback_text": "Answer is short (1 words). Aim for 30+ words. Missed key concepts: python, django, database. Try structuring in 2–3 sentences with examples.",
+    "score": 0,
+    "ai_feedback": null,
+    "raw_ai_response": "",
+    "created_at": "2025-09-10T19:08:16.183Z"
+  }
+}
+]

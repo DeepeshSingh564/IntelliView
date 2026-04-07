@@ -1,0 +1,464 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-2">
+          Interview for {{ role.name }}
+        </h1>
+        <p class="lead text-muted">
+          Answer questions and receive AI-powered feedback
+        </p>
+      </div>
+
+      <!-- Progress Section -->
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="card-title mb-0">Your Progress</h5>
+            <div class="d-flex align-items-center gap-3">
+              <span class="text-muted" id="progress-text"
+                >0/0 questions answered</span
+              >
+              <span id="timer" class="badge bg-success fs-6">30:00</span>
+            </div>
+          </div>
+          <div class="progress mb-2" style="height: 20px">
+            <div
+              id="progress-bar"
+              class="progress-bar progress-bar-striped progress-bar-animated"
+              role="progressbar"
+              style="width: 0%"
+            >
+              0%
+            </div>
+          </div>
+          <div
+            id="completion-message"
+            class="alert alert-success mt-3 mb-0"
+            style="display: none"
+          >
+            <i class="fas fa-trophy me-2"></i> Interview Completed! Great job.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Box -->
+      <div id="question-box" class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white py-3">
+          <h5 class="card-title mb-0">
+            <i class="fas fa-question-circle me-2 text-primary"></i>Current
+            Question
+          </h5>
+        </div>
+        <div class="card-body p-4">
+          <div id="question-text" class="fs-5 mb-4 p-3 bg-light rounded">
+            Loading question...
+          </div>
+          <textarea
+            id="answer"
+            class="form-control p-3"
+            rows="5"
+            placeholder="Type your answer here..."
+          ></textarea>
+          <div class="d-flex mt-4">
+            <button id="submit-answer" class="btn btn-primary btn-lg me-2">
+              <i class="fas fa-paper-plane me-2"></i> Submit Answer
+            </button>
+            <button id="stop-interview" class="btn btn-outline-danger btn-lg">
+              <i class="fas fa-stop-circle me-2"></i> Stop Interview
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback -->
+      <div
+        id="feedback"
+        class="card shadow-sm border-0 mb-4"
+        style="display: none"
+      >
+        <div class="card-header bg-white py-3">
+          <h5 class="card-title mb-0">
+            <i class="fas fa-comment-dots me-2 text-primary"></i> Feedback
+          </h5>
+        </div>
+        <div class="card-body p-4">
+          <div id="feedback-content"></div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div id="summary" class="card shadow-sm border-0" style="display: none">
+        <div class="card-header bg-white py-3">
+          <h3 class="card-title mb-0">
+            <i class="fas fa-clipboard-list me-2 text-primary"></i> Session
+            Summary
+          </h3>
+        </div>
+        <div class="card-body p-4">
+          <div id="summary-list"></div>
+          <div id="average-score" class="alert alert-info mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .progress {
+    border-radius: 10px;
+  }
+
+  .progress-bar {
+    border-radius: 10px;
+    transition: width 0.5s ease;
+  }
+
+  .btn {
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  #answer {
+    border-radius: 8px;
+    resize: vertical;
+  }
+
+  #question-text {
+    line-height: 1.6;
+    border-left: 4px solid #4361ee;
+  }
+</style>
+
+<script>
+        let questions = [];
+        let currentIndex = 0;
+        let attempts = [];
+        let roleId = {{ role.id }};
+        let sessionId = null;
+
+        let timeLeft = 30 * 60;
+      let timerInterval = null;
+
+      function startTimer() {
+          timerInterval = setInterval(() => {
+              timeLeft--;
+              const minutes = Math.floor(timeLeft / 60);
+              const seconds = timeLeft % 60;
+              const display = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+              const timerEl = document.getElementById("timer");
+              timerEl.innerText = display;
+
+              if (timeLeft <= 300) {
+                  timerEl.className = "badge bg-warning fs-6"; // yellow under 5 mins
+              }
+              if (timeLeft <= 60) {
+                  timerEl.className = "badge bg-danger fs-6"; // red under 1 min
+              }
+              if (timeLeft <= 0) {
+                  clearInterval(timerInterval);
+                  endInterview();
+              }
+          }, 1000);
+      }
+
+        // Fetch CSRF token from the cookie
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        const csrftoken = getCookie('csrftoken');
+
+        async function startSession() {
+            try {
+                let res = await fetch("/api/session/start", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": csrftoken
+                    },
+                    body: JSON.stringify({
+                        role_id: roleId
+                    })
+                });
+
+                if (!res.ok) {
+                    let errorText = await res.text();
+                    console.error("Error starting session:", errorText);
+                    alert("Error starting session. See console for details.");
+                    return false;
+                }
+
+                let sessionData = await res.json();
+                sessionId = sessionData.session_id;
+                console.log("Session started:", sessionData);
+                return true;
+            } catch (error) {
+                console.error("Error starting session:", error);
+                return false;
+            }
+        }
+
+        // Fetch questions from backend
+        async function loadQuestions() {
+            try {
+                let res = await fetch(`/api/questions/${roleId}/`, {
+                    method: "GET",
+                    headers: {
+                        "X-CSRFToken": csrftoken
+                    }
+                });
+
+                if (!res.ok) {
+                    let errorText = await res.text();
+                    console.error("Error loading questions:", errorText);
+                    alert("Error loading questions. See console for details.");
+                    return;
+                }
+
+                let data = await res.json();
+                questions = data.questions || [];
+                console.log("Questions loaded:", questions);
+
+                if (questions.length > 0) {
+                    showQuestion();
+                } else {
+                    document.getElementById("question-text").innerText = "No questions available for this role.";
+                }
+            } catch (error) {
+                console.error("Error fetching questions:", error);
+            }
+        }
+
+        // Show current question
+        function showQuestion() {
+            if (currentIndex < questions.length) {
+                document.getElementById("question-text").innerText = questions[currentIndex].text;
+                document.getElementById("answer").value = "";
+                document.getElementById("feedback").style.display = "none";
+                updateProgress();
+            } else {
+                endInterview();
+            }
+        }
+
+        // Submit answer
+        async function submitAnswer() {
+            const answer = document.getElementById("answer").value.trim();
+            if (!answer) {
+                alert("Please write an answer first!");
+                return;
+            }
+
+            if (!sessionId) {
+                alert("Session not started. Please refresh the page.");
+                return;
+            }
+
+            const questionId = questions[currentIndex].id;
+            console.log("Submitting answer with:", {
+                session_id: sessionId,
+                question_id: questionId,
+                answer_text: answer
+            });
+
+            // Show loading state
+            const submitBtn = document.getElementById("submit-answer");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing...';
+
+            let res = await fetch("/api/answer/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": csrftoken
+                },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    question_id: questionId,
+                    answer_text: answer
+                })
+            });
+
+            if (!res.ok) {
+                let text = await res.text();
+                console.error("Server error:", text);
+                alert("Error from server: " + res.status);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Submit Answer';
+                return;
+            }
+
+            let data = await res.json();
+
+            // Show feedback with better formatting
+    const feedbackData = data.feedback_structured || {};
+    const strengths = feedbackData.strengths || [];
+    const weaknesses = feedbackData.weaknesses || [];
+    const improvements = feedbackData.improvements || [];
+
+    const feedbackContent = document.getElementById("feedback-content");
+    feedbackContent.innerHTML = `
+        <div class="d-flex align-items-center mb-3">
+            <span class="badge bg-primary me-2">Score: ${data.score}/10</span>
+            <span class="text-muted">Question ${currentIndex + 1} of ${questions.length}</span>
+        </div>
+        ${strengths.length ? `
+        <div class="mb-3">
+            <h6 class="text-success"><i class="fas fa-check-circle me-1"></i>Strengths</h6>
+            <ul class="mb-0">${strengths.map(s => `<li>${s}</li>`).join('')}</ul>
+        </div>` : ''}
+        ${weaknesses.length ? `
+        <div class="mb-3">
+            <h6 class="text-danger"><i class="fas fa-times-circle me-1"></i>Weaknesses</h6>
+            <ul class="mb-0">${weaknesses.map(w => `<li>${w}</li>`).join('')}</ul>
+        </div>` : ''}
+        ${improvements.length ? `
+        <div class="mb-0">
+            <h6 class="text-warning"><i class="fas fa-lightbulb me-1"></i>Improvements</h6>
+            <ul class="mb-0">${improvements.map(i => `<li>${i}</li>`).join('')}</ul>
+        </div>` : ''}
+    `;
+            document.getElementById("feedback").style.display = "block";
+
+            attempts.push({
+                question: questions[currentIndex].text,
+                answer: answer,
+                score: data.score,
+                feedback: data.feedback,
+                structured: data.feedback_structured || {}
+            });
+
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Submit Answer';
+
+            currentIndex++;
+
+            // Scroll to feedback
+            document.getElementById("feedback").scrollIntoView({ behavior: 'smooth' });
+
+            // Show next question after a delay
+            setTimeout(showQuestion, 2500);
+        }
+
+        // Update progress bar - FIXED VERSION
+        function updateProgress() {
+            if (questions.length > 0) {
+                // FIXED: Changed from currentIndex to currentIndex + 1
+                let percentage = Math.round(((currentIndex + 1) / questions.length) * 100);
+
+                // Ensure we don't exceed 100%
+                percentage = Math.min(percentage, 100);
+
+                const progressBar = document.getElementById("progress-bar");
+                progressBar.style.width = percentage + "%";
+                progressBar.innerText = percentage + "%";
+
+                // Update progress text
+                document.getElementById("progress-text").innerText =
+                    `${currentIndex + 1} of ${questions.length} questions answered`;
+
+                // Show completion message when at 100%
+                if (percentage === 100) {
+                    document.getElementById("completion-message").style.display = "block";
+                }
+            }
+        }
+
+  function endInterview() {
+      clearInterval(timerInterval);
+      document.getElementById("question-box").style.display = "none";
+      document.getElementById("feedback").style.display = "none";
+      document.getElementById("summary").style.display = "block";
+      document.getElementById("completion-message").style.display = "block";
+
+      const summaryList = document.getElementById("summary-list");
+      summaryList.innerHTML = "";
+
+      const avgScore = attempts.length > 0 ?
+          (attempts.reduce((sum, a) => sum + a.score, 0) / attempts.length).toFixed(1) : 0;
+
+      const scoreColor = avgScore >= 7 ? "success" : avgScore >= 4 ? "warning" : "danger";
+
+      // Overall performance card
+      summaryList.innerHTML = `
+          <div class="text-center mb-4">
+              <h2 class="display-4 fw-bold text-${scoreColor}">${avgScore}<span class="fs-4">/10</span></h2>
+              <p class="text-muted">Overall Score across ${attempts.length} questions</p>
+          </div>
+          <div class="accordion" id="summaryAccordion">
+              ${attempts.map((attempt, index) => {
+                  const scoreCol = attempt.score >= 7 ? "success" : attempt.score >= 4 ? "warning" : "danger";
+                  const structured = attempt.structured || {};
+                  const strengths = structured.strengths || [];
+                  const weaknesses = structured.weaknesses || [];
+                  const improvements = structured.improvements || [];
+                  return `
+                  <div class="accordion-item mb-2 border rounded">
+                      <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q${index}">
+                              <span class="badge bg-${scoreCol} me-2">${attempt.score}/10</span>
+                              Question ${index + 1}: ${attempt.question.substring(0, 60)}...
+                          </button>
+                      </h2>
+                      <div id="q${index}" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                              <p class="mb-3"><strong>Your Answer:</strong> ${attempt.answer}</p>
+                              ${strengths.length ? `<h6 class="text-success">Strengths</h6><ul>${strengths.map(s => `<li>${s}</li>`).join('')}</ul>` : ''}
+                              ${weaknesses.length ? `<h6 class="text-danger">Weaknesses</h6><ul>${weaknesses.map(w => `<li>${w}</li>`).join('')}</ul>` : ''}
+                              ${improvements.length ? `<h6 class="text-warning">Improvements</h6><ul>${improvements.map(i => `<li>${i}</li>`).join('')}</ul>` : ''}
+                          </div>
+                      </div>
+                  </div>`;
+              }).join('')}
+          </div>
+      `;
+
+      document.getElementById("average-score").style.display = "none";
+      document.getElementById("summary").scrollIntoView({ behavior: 'smooth' });
+  }
+
+        // Initialize the interview
+        async function initInterview() {
+            const sessionStarted = await startSession();
+            if (sessionStarted) {
+                await loadQuestions();
+                startTimer();
+            }
+        }
+
+        // Button events
+        document.getElementById("submit-answer").addEventListener("click", submitAnswer);
+        document.getElementById("stop-interview").addEventListener("click", endInterview);
+
+        // Start the interview when page loads
+        initInterview();
+</script>
+{% endblock %}

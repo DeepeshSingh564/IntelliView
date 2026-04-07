@@ -1,0 +1,162 @@
+<script>
+let questions = [];
+let currentIndex = 0;
+let attempts = [];
+let roleId = {{ role.id }};
+let sessionId = null;
+
+async function startSession() {
+    try {
+        let res = await fetch("/api/session/start", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                role_id: roleId
+            })
+        });
+
+        if (!res.ok) {
+            let errorText = await res.text();
+            console.error("Error starting session:", errorText);
+            alert("Error starting session. See console for details.");
+            return false;
+        }
+
+        let sessionData = await res.json();
+        sessionId = sessionData.session_id;
+        console.log("Session started:", sessionData);
+        return true;
+    } catch (error) {
+        console.error("Error starting session:", error);
+        alert("Error starting session");
+        return false;
+    }
+}
+
+// Fetch questions from backend
+async function loadQuestions() {
+    // Start session first
+    let sessionStarted = await startSession();
+    if (!sessionStarted) {
+        return;
+    }
+
+    let res = await fetch(`/api/questions/${roleId}/`);
+    if (!res.ok) {
+        let errorText = await res.text();
+        console.error("Error loading questions:", errorText);
+        alert("Error loading questions. See console for details.");
+        return;
+    }
+
+    let data = await res.json();
+    questions = data.questions; // Extract questions array from response
+    console.log("Fetched Questions:", questions);
+    showQuestion();
+}
+
+// Show current question
+function showQuestion() {
+    if (!Array.isArray(questions)) {
+        console.error("Questions is not an array. Current value:", questions);
+        alert("Error fetching questions.");
+        return;
+    }
+
+    console.log("Current Index:", currentIndex);
+    console.log("Questions Length:", questions.length);
+
+    if (currentIndex < questions.length) {
+        document.getElementById("question-text").innerText = questions[currentIndex].text; // Ensure text is accessed correctly
+        document.getElementById("answer").value = "";
+        updateProgress();
+    } else {
+        endInterview();
+    }
+}
+// Submit answer
+  async function submitAnswer() {
+      const answer = document.getElementById("answer").value.trim();
+      if (!answer) {
+          alert("Please write an answer first!");
+          return;
+      }
+
+      if (!sessionId) {
+          alert("Session not started. Please refresh the page.");
+          return;
+      }
+
+      const questionId = questions[currentIndex].id;
+      console.log("Submitting answer with:", {
+          session_id: sessionId,
+          question_id: questionId,
+          answer_text: answer
+      });
+
+      let res = await fetch("/api/answer/", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+              session_id: sessionId,
+              question_id: questionId,
+              answer_text: answer
+          })
+      });
+
+      if (!res.ok) {
+          let text = await res.text();
+          console.error("Server error:", text);
+          alert("Error from server: " + res.status);
+          return;
+      }
+
+      let data = await res.json();
+      document.getElementById("feedback").style.display = "block";
+      document.getElementById("feedback").innerText =
+          "Score: " + data.score + " | Feedback: " + data.feedback;
+
+      attempts.push({
+          question: questions[currentIndex].text,
+          answer: answer,
+          score: data.score,
+          feedback: data.feedback
+      });
+
+      currentIndex++;
+      setTimeout(showQuestion, 2000);
+  }
+
+
+// Update progress bar
+function updateProgress() {
+    let percent = Math.round((currentIndex / questions.length) * 100);
+    let bar = document.getElementById("progress-bar");
+    bar.style.width = percent + "%";
+    bar.innerText = percent + "%";
+}
+
+// End interview
+function endInterview() {
+    document.getElementById("question-box").style.display = "none";
+    document.getElementById("feedback").style.display = "none";
+
+    let summaryDiv = document.getElementById("summary");
+    summaryDiv.style.display = "block";
+
+    let list = document.getElementById("summary-list");
+    list.innerHTML = "";
+    attempts.forEach(a => {
+        let li = document.createElement("li");
+        li.innerText = `${a.question} | Your Answer: ${a.answer} | Score: ${a.score} | Feedback: ${a.feedback}`;
+        list.appendChild(li);
+    });
+}
+
+// Button events
+document.getElementById("submit-answer").addEventListener("click", submitAnswer);
+document.getElementById("stop-interview").addEventListener("click", endInterview);
+
+// Load questions at start
+loadQuestions();
+</script>

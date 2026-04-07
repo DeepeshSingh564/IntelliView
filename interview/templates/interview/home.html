@@ -1,0 +1,267 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <!-- Hero Section -->
+  <div class="row align-items-center mb-6">
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold mb-3">Master Your Next Interview</h1>
+      <p class="lead text-secondary mb-4">AI-powered interview preparation with realistic questions and instant feedback for today's most in-demand roles.</p>
+      <div class="d-flex gap-2">
+        <a href="#roles" class="btn btn-primary btn-lg px-4">Explore Roles</a>
+        <a href="#how-it-works" class="btn btn-outline-secondary btn-lg px-4">How It Works</a>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center">
+      <div class="hero-visual bg-light rounded-3 p-5 mt-5 mt-lg-0">
+        <i class="fas fa-user-tie text-primary" style="font-size: 4rem;"></i>
+        <div class="mt-3">
+          <div class="d-flex justify-content-center gap-2 mb-2">
+            <span class="badge bg-primary">AI Feedback</span>
+            <span class="badge bg-success">Real-time Scoring</span>
+          </div>
+          <div class="d-flex justify-content-center gap-2">
+            <span class="badge bg-info">Role-specific</span>
+            <span class="badge bg-purple">Progress Tracking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="row bg-light rounded-3 py-4 mb-6">
+    <div class="col-md-4 text-center">
+      <h3 class="fw-bold text-primary mb-1">1000+</h3>
+      <p class="text-secondary mb-0">Practice Questions</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <h3 class="fw-bold text-primary mb-1">98%</h3>
+      <p class="text-secondary mb-0">User Satisfaction</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <h3 class="fw-bold text-primary mb-1">24/7</h3>
+      <p class="text-secondary mb-0">Available</p>
+    </div>
+  </div>
+
+  Roles Section
+  <div id="roles" class="mb-6">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h3 fw-bold">Select Your Role</h2>
+      <div class="dropdown">
+        <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+          <li><a class="dropdown-item" href="#">All Roles</a></li>
+          <li><a class="dropdown-item" href="#">Engineering</a></li>
+          <li><a class="dropdown-item" href="#">Business</a></li>
+          <li><a class="dropdown-item" href="#">Design</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {% if roles %}
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for role in roles %}
+        <div class="col">
+          <a href="{% url 'interview' role.id %}" class="card role-card h-100 text-decoration-none">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                  <i class="fas fa-user-tie text-primary"></i>
+                </div>
+                <h5 class="card-title mb-0">{{ role.name }}</h5>
+              </div>
+              <p class="card-text text-secondary small">Practice common interview questions for {{ role.name }} positions with AI-powered feedback.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-light text-dark">15 questions</span>
+                <span class="text-primary">Start →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <!-- Pagination for future roles
+      <nav aria-label="Role pagination" class="mt-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav> -->
+    {% else %}
+      <div class="text-center py-5">
+        <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+        <p class="text-muted">No roles available at the moment. Please check back later.</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- How It Works Section -->
+  <div id="how-it-works" class="bg-light rounded-3 p-5 mb-6">
+    <h2 class="text-center h3 fw-bold mb-5">How It Works</h2>
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white rounded-3 p-4 h-100">
+          <div class="number-circle bg-primary text-white rounded-circle mx-auto mb-3">1</div>
+          <h5>Select Your Role</h5>
+          <p class="text-secondary">Choose from our curated list of professional roles</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white rounded-3 p-4 h-100">
+          <div class="number-circle bg-primary text-white rounded-circle mx-auto mb-3">2</div>
+          <h5>Answer Questions</h5>
+          <p class="text-secondary">Respond to interview questions as you would in a real interview</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white rounded-3 p-4 h-100">
+          <div class="number-circle bg-primary text-white rounded-circle mx-auto mb-3">3</div>
+          <h5>Get AI Feedback</h5>
+          <p class="text-secondary">Receive immediate scoring and detailed improvement suggestions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
+  <div class="mb-6">
+    <h2 class="text-center h3 fw-bold mb-5">What Users Say</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"The AI feedback was incredibly accurate. I landed my Django developer role thanks to the practice!"</p>
+            <div class="d-flex align-items-center">
+              <div class="bg-primary rounded-circle me-2" style="width: 30px; height: 30px;"></div>
+              <div>
+                <p class="mb-0 fw-bold">Alex Johnson</p>
+                <p class="mb-0 text-secondary small">Software Engineer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"The data science questions were spot-on. I felt completely prepared for my technical interview."</p>
+            <div class="d-flex align-items-center">
+              <div class="bg-success rounded-circle me-2" style="width: 30px; height: 30px;"></div>
+              <div>
+                <p class="mb-0 fw-bold">Maria Chen</p>
+                <p class="mb-0 text-secondary small">Data Scientist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="card-text">"The product manager questions covered everything from strategy to execution. Highly recommend!"</p>
+            <div class="d-flex align-items-center">
+              <div class="bg-info rounded-circle me-2" style="width: 30px; height: 30px;"></div>
+              <div>
+                <p class="mb-0 fw-bold">James Wilson</p>
+                <p class="mb-0 text-secondary small">Product Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-primary rounded-3 p-5 text-center text-white">
+    <h2 class="h3 fw-bold mb-3">Ready to Ace Your Interview?</h2>
+    <p class="mb-4">Join thousands of professionals who have advanced their careers with our AI interview coach</p>
+    <a href="#roles" class="btn btn-light btn-lg px-4">Get Started Now</a>
+  </div>
+</div>
+
+<style>
+  .mb-6 {
+    margin-bottom: 5rem;
+  }
+  
+  .role-card {
+    transition: all 0.2s ease;
+    border: 1px solid #e9ecef;
+  }
+  
+  .role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #4361ee;
+    text-decoration: none;
+  }
+  
+  .number-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .bg-purple {
+    background-color: #6f42c1;
+  }
+  
+  .hero-visual {
+    position: relative;
+  }
+  
+  .hero-visual:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    top: -20px;
+    right: -20px;
+  }
+  
+  @media (max-width: 768px) {
+    .display-5 {
+      font-size: 2rem;
+    }
+  }
+</style>
+{% endblock %}

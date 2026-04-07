@@ -1,0 +1,156 @@
+ource list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.Understand this error
+35The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?Understand this error
+35The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.Understand this error
+stallwart.build.js:1 stallwart: failed ping 1
+stallwart.build.js:1 stallwart: failed ping 2
+interview-coach-ai:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.Understand this error
+interview-coach-ai:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?Understand this error
+interview-coach-ai:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.Understand this error
+_app-e088dca48e5e952e.js:38 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-e088dca48e5e952e.js:38 [LaunchDarkly] LaunchDarkly client initialized
+stallwart.build.js:1 stallwart: failed ping 1
+stallwart.build.js:1 stallwart: failed ping 2
+stallwart.build.js:1 stallwart: failed ping 1
+interview-coach-ai:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+35Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this error
+6Unrecognized feature: 'ambient-light-sensor'.Understand this warning
+6Unrecognized feature: 'battery'.Understand this warning
+6Unrecognized feature: 'execution-while-not-rendered'.Understand this warning
+6Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warning
+6Unrecognized feature: 'layout-animations'.Understand this warning
+6Unrecognized feature: 'legacy-image-formats'.Understand this warning
+6Unrecognized feature: 'navigation-override'.Understand this warning
+6Unrecognized feature: 'oversized-images'.Understand this warning
+6Unrecognized feature: 'publickey-credentials'.Understand this warning
+6Unrecognized feature: 'speaker-selection'.Understand this warning
+6Unrecognized feature: 'unoptimized-images'.Understand this warning
+6Unrecognized feature: 'unsized-media'.Understand this warning
+framework-be4c4e2e1da980c8.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-be4c4e2e1da980c8.js:1Understand this warning
+6Allow attribute will take precedence over 'allowfullscreen'.Understand this warning
+6Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warning
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+2stallwart.build.js:1 stallwart: failed ping 1
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+stallwart.build.js:1 stallwart: failed ping 1
+stallwart.build.js:1 stallwart: failed ping 2
+stallwart.build.js:1 stallwart: failed ping 3
+stallwart.build.js:1 stallwart: failed ping 4
+stallwart.build.js:1 stallwart: failed ping 5
+stallwart.build.js:1 stallwart: session stalled
+_app-e088dca48e5e952e.js:38 WARN: A component changed from uncontrolled to controlled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 WARN: A component changed from controlled to uncontrolled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 WARN: A component changed from uncontrolled to controlled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+6504-70229d28ce689955.js:1 WebSocket connection to 'wss://eval.pike.platform.replit.com/wsv2/v2.public.Q2dZSWllL0J4UVlTQmdpb2k4TEZCaUlFY0dsclpUQUFPc0FDQ2lRd1ltTTJaVEZrT0MweE16bG1MVFF5TWpRdE9USXpNQzFqT0dVNU16QTJZbUpoWTJJU0EyNXBlQm9XY21Wd2JHbDBMWEpsY0d3dFptbHNaWE10Y0dsclpTSVNhVzUwWlhKMmFXVjNMV052WVdOb0xXRnBLZzlrWldWd2MybHVaMmh5WVdwd2RURkNUZ29YY21Wd2JHbDBMWEpsY0d3dFlteHZZMnR6TFhCcGEyVVNGWEpsY0d4cGRDMXlaWEJzTFcxbGRHRXRjR2xyWlJvY2NtVndiR2wwTFcxaGNtZGhjbWx1WlMxaWJHOWphM010Y0dsclpVb0hDT1RnckJZUUFWQUFXZzlwYm5SbGJuUmZjR1Z5YzI5dVlXeHFhSHNpY205dmRFOXlhV2RwYmxKbGNHeFNaV3hsWVhObFNXUWlPaUkyTlRRek1UTm1NaTB5TWpRd0xUUXhOak10T0RVMVpDMDVNREk0T1RGaVlUVXlaVFFpTENKeWIyOTBUM0pwWjJsdVVtVndiRlZ5YkNJNklpOUFjbVZ3YkdsMEwyUnFZVzVuYnlKOWVBQlNKQWdCRUlDQWdJQUlHUUFBQUFBQUFQQS9JUUFBQUFBQUFQQS9LSUNBZ0lBSU1BRTRBR0FBYWhZSTVPQ3NGaElQWkdWbGNITnBibWRvY21GcWNIVXhnZ0VDS2dDYUFRb0tDREF1TUM0eE5qZ3pvQUVBCg868kYif4fv_6LW6dSoRwHkl8eZlpIaF83NAu-09J5F6so7E3OhznUdFjH-w0Sifs8iqtzKPysc9fKIE5_JCQ.Q2dad2NtOWtPak1pQ25KbGNHeHBkQzVqYjIwPQ' failed: 
+connect @ 6504-70229d28ce689955.js:1Understand this error
+6504-70229d28ce689955.js:1 WebSocket connection to 'wss://eval.pike.platform.replit.com/wsv2/v2.public.Q2dZSWllL0J4UVlTQmdpb2k4TEZCaUlFY0dsclpUQUFPc0FDQ2lRd1ltTTJaVEZrT0MweE16bG1MVFF5TWpRdE9USXpNQzFqT0dVNU16QTJZbUpoWTJJU0EyNXBlQm9XY21Wd2JHbDBMWEpsY0d3dFptbHNaWE10Y0dsclpTSVNhVzUwWlhKMmFXVjNMV052WVdOb0xXRnBLZzlrWldWd2MybHVaMmh5WVdwd2RURkNUZ29YY21Wd2JHbDBMWEpsY0d3dFlteHZZMnR6TFhCcGEyVVNGWEpsY0d4cGRDMXlaWEJzTFcxbGRHRXRjR2xyWlJvY2NtVndiR2wwTFcxaGNtZGhjbWx1WlMxaWJHOWphM010Y0dsclpVb0hDT1RnckJZUUFWQUFXZzlwYm5SbGJuUmZjR1Z5YzI5dVlXeHFhSHNpY205dmRFOXlhV2RwYmxKbGNHeFNaV3hsWVhObFNXUWlPaUkyTlRRek1UTm1NaTB5TWpRd0xUUXhOak10T0RVMVpDMDVNREk0T1RGaVlUVXlaVFFpTENKeWIyOTBUM0pwWjJsdVVtVndiRlZ5YkNJNklpOUFjbVZ3YkdsMEwyUnFZVzVuYnlKOWVBQlNKQWdCRUlDQWdJQUlHUUFBQUFBQUFQQS9JUUFBQUFBQUFQQS9LSUNBZ0lBSU1BRTRBR0FBYWhZSTVPQ3NGaElQWkdWbGNITnBibWRvY21GcWNIVXhnZ0VDS2dDYUFRb0tDREF1TUM0eE5qZ3pvQUVBCg868kYif4fv_6LW6dSoRwHkl8eZlpIaF83NAu-09J5F6so7E3OhznUdFjH-w0Sifs8iqtzKPysc9fKIE5_JCQ.Q2dad2NtOWtPak1pQ25KbGNHeHBkQzVqYjIwPQ' failed: WebSocket is closed before the connection is established.
+cleanupSocket @ 6504-70229d28ce689955.js:1Understand this warning
+interview-coach-ai:1 Uncaught (in promise) TimeoutUnderstand this error
+_app-e088dca48e5e952e.js:38 WARN: A component changed from uncontrolled to controlled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+_app-e088dca48e5e952e.js:38 WARN: A component changed from controlled to uncontrolled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 WARN: A component changed from uncontrolled to controlled.
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+d1f481b4ff81f1dd225ee04b64120278:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+_app-e088dca48e5e952e.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 commitComplete listeners added. Use emitter.setMaxListeners() to increase limit
+    at l (2255-9a443df06a7efc29.js:1:63056)
+    at f.addListener (2255-9a443df06a7efc29.js:1:65942)
+    at h (7276-399a388abf93a24e.js:1:41756)
+    at Object.watchTextFile (7276-399a388abf93a24e.js:1:47534)
+    at 3087-e9bde545d8b669be.js:1:368633
+    at oO (framework-be4c4e2e1da980c8.js:1:125387)
+    at uB (framework-be4c4e2e1da980c8.js:1:154382)
+    at u_ (framework-be4c4e2e1da980c8.js:1:137236)
+    at r6 (framework-be4c4e2e1da980c8.js:1:86196)
+    at framework-be4c4e2e1da980c8.js:1:152828
+    at uO (framework-be4c4e2e1da980c8.js:1:152834)
+    at uS (framework-be4c4e2e1da980c8.js:1:136239)
+    at C (framework-be4c4e2e1da980c8.js:1:206173)
+    at MessagePort.z (framework-be4c4e2e1da980c8.js:1:206703)
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fileDirty listeners added. Use emitter.setMaxListeners() to increase limit
+    at l (2255-9a443df06a7efc29.js:1:63056)
+    at f.addListener (2255-9a443df06a7efc29.js:1:65942)
+    at h (7276-399a388abf93a24e.js:1:41876)
+    at Object.watchTextFile (7276-399a388abf93a24e.js:1:47534)
+    at 3087-e9bde545d8b669be.js:1:368633
+    at oO (framework-be4c4e2e1da980c8.js:1:125387)
+    at uB (framework-be4c4e2e1da980c8.js:1:154382)
+    at u_ (framework-be4c4e2e1da980c8.js:1:137236)
+    at r6 (framework-be4c4e2e1da980c8.js:1:86196)
+    at framework-be4c4e2e1da980c8.js:1:152828
+    at uO (framework-be4c4e2e1da980c8.js:1:152834)
+    at uS (framework-be4c4e2e1da980c8.js:1:136239)
+    at C (framework-be4c4e2e1da980c8.js:1:206173)
+    at MessagePort.z (framework-be4c4e2e1da980c8.js:1:206703)
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fileClean listeners added. Use emitter.setMaxListeners() to increase limit
+    at l (2255-9a443df06a7efc29.js:1:63056)
+    at f.addListener (2255-9a443df06a7efc29.js:1:65942)
+    at h (7276-399a388abf93a24e.js:1:41991)
+    at Object.watchTextFile (7276-399a388abf93a24e.js:1:47534)
+    at 3087-e9bde545d8b669be.js:1:368633
+    at oO (framework-be4c4e2e1da980c8.js:1:125387)
+    at uB (framework-be4c4e2e1da980c8.js:1:154382)
+    at u_ (framework-be4c4e2e1da980c8.js:1:137236)
+    at r6 (framework-be4c4e2e1da980c8.js:1:86196)
+    at framework-be4c4e2e1da980c8.js:1:152828
+    at uO (framework-be4c4e2e1da980c8.js:1:152834)
+    at uS (framework-be4c4e2e1da980c8.js:1:136239)
+    at C (framework-be4c4e2e1da980c8.js:1:206173)
+    at MessagePort.z (framework-be4c4e2e1da980c8.js:1:206703)
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 commitStart listeners added. Use emitter.setMaxListeners() to increase limit
+    at l (2255-9a443df06a7efc29.js:1:63056)
+    at f.addListener (2255-9a443df06a7efc29.js:1:65942)
+    at h (7276-399a388abf93a24e.js:1:42108)
+    at Object.watchTextFile (7276-399a388abf93a24e.js:1:47534)
+    at 3087-e9bde545d8b669be.js:1:368633
+    at oO (framework-be4c4e2e1da980c8.js:1:125387)
+    at uB (framework-be4c4e2e1da980c8.js:1:154382)
+    at u_ (framework-be4c4e2e1da980c8.js:1:137236)
+    at r6 (framework-be4c4e2e1da980c8.js:1:86196)
+    at framework-be4c4e2e1da980c8.js:1:152828
+    at uO (framework-be4c4e2e1da980c8.js:1:152834)
+    at uS (framework-be4c4e2e1da980c8.js:1:136239)
+    at C (framework-be4c4e2e1da980c8.js:1:206173)
+    at MessagePort.z (framework-be4c4e2e1da980c8.js:1:206703)
+(anonymous) @ _app-e088dca48e5e952e.js:38Understand this warning
+_app-e088dca48e5e952e.js:38 MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 promptUserReconnect listeners added. Use emitter.setMaxListeners() to increase limit
+    at l (2255-9a443df06a7efc29.js:1:63056)
+    at f.addListener (2255-9a443df06a7efc29.js:1:65942)
+    at h (7276-399a388abf93a24e.js:1:43382)
+    at Object.watchTextFile (7276-399a388abf93a24e.js:1:47534)
+    at 3087-e9bde545d8b669be.js:1:368633
+    at oO (framework-be4c4e2e1da980c8.js:1:125387)
+    at uB (framework-be4c4e2e1da980c8.js:1:154382)
+    at u_ (framework-be4c4e2e1da980c8.js:1:137236)
+    at r6 (framework-be4c4e2e1da980c8.js:1:86196)
+    at framework-be4c4e2e1da980c8.js:1:152828
+    at uO (framework-be4c4e2e1da980c8.js:1:152834)
+    at uS (framework-be4c4e2e1da980c8.js:1:136239)
+    at C (framework-be4c4e2e1da980c8.js:1:206173)
+    at MessagePort.z (framework-be4c4e2e1da980c8.js:1:206703)
