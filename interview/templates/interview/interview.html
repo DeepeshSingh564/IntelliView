@@ -388,10 +388,6 @@
                 document.getElementById("progress-text").innerText =
                     `${currentIndex + 1} of ${questions.length} questions answered`;
 
-                // Show completion message when at 100%
-                if (percentage === 100) {
-                    document.getElementById("completion-message").style.display = "block";
-                }
             }
         }
 
@@ -400,6 +396,7 @@
       document.getElementById("question-box").style.display = "none";
       document.getElementById("feedback").style.display = "none";
       document.getElementById("summary").style.display = "block";
+      document.getElementById("completion-message").style.display = "block";
 
       const summaryList = document.getElementById("summary-list");
       summaryList.innerHTML = "";
