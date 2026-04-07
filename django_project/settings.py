@@ -35,7 +35,7 @@ DEBUG = True
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = ['https://intelliview-r9bp.onrender.com/']
 # Application definition
 
 INSTALLED_APPS = [
