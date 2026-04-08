@@ -3,6 +3,7 @@ import os
 import shutil
 from django.conf import settings
 
+
 class Command(BaseCommand):
     help = "Wipes SQLite DB and migrations, then rebuilds fresh schema."
 
@@ -31,4 +32,6 @@ class Command(BaseCommand):
         os.system("python manage.py makemigrations")
         os.system("python manage.py migrate")
 
-        self.stdout.write(self.style.SUCCESS("Database and migrations reset successfully."))
+        self.stdout.write(
+            self.style.SUCCESS("Database and migrations reset successfully.")
+        )

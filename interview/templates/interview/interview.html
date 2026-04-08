@@ -91,11 +91,21 @@
 
       <!-- Summary -->
       <div id="summary" class="card shadow-sm border-0" style="display: none">
-        <div class="card-header bg-white py-3">
+        <div
+          class="card-header bg-white py-3 d-flex justify-content-between align-items-center"
+        >
           <h3 class="card-title mb-0">
             <i class="fas fa-clipboard-list me-2 text-primary"></i> Session
             Summary
           </h3>
+          <div class="d-flex gap-2">
+            <a href="{% url 'interview' role.id %}" class="btn btn-primary">
+              <i class="fas fa-redo me-1"></i> Try Again
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+              <i class="fas fa-home me-1"></i> Back to Roles
+            </a>
+          </div>
         </div>
         <div class="card-body p-4">
           <div id="summary-list"></div>
@@ -228,6 +238,12 @@
         // Fetch questions from backend
         async function loadQuestions() {
             try {
+                document.getElementById("question-text").innerHTML = `
+                     <div class="d-flex align-items-center gap-3">
+                        <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+                         <span>Generating your questions with AI, please wait...</span>
+                        </div>
+                `;
                 let res = await fetch(`/api/questions/${roleId}/`, {
                     method: "GET",
                     headers: {

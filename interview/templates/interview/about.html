@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+    
+    <!-- Hero -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">About IntelliView</h1>
+        <p class="lead text-muted col-lg-7 mx-auto">An AI-powered mock interview platform built to help developers practice, get real feedback, and walk into interviews with confidence.</p>
+    </div>
+
+    <!-- What is it -->
+    <div class="row align-items-center mb-6">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-3">What is IntelliView?</h2>
+            <p class="text-muted">IntelliView is a mock interview coach that generates role-specific technical questions using AI and evaluates your answers in real time. You get structured feedback — what you did well, where you fell short, and exactly how to improve.</p>
+            <p class="text-muted">It's built for developers who want to practice without the pressure of a real interview, and get honest feedback instead of generic tips.</p>
+        </div>
+        <div class="col-lg-6">
+            <div class="bg-primary bg-opacity-10 rounded-3 p-5 text-center">
+                <i class="fas fa-robot text-primary" style="font-size: 5rem;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="bg-light rounded-3 p-5 mb-5">
+        <h2 class="fw-bold text-center mb-5">How It Works</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.3rem;font-weight:700;">1</div>
+                <h5>Pick a Role</h5>
+                <p class="text-muted small">Choose from 25+ tech roles including Django, FastAPI, React, DevOps and more.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.3rem;font-weight:700;">2</div>
+                <h5>AI Generates Questions</h5>
+                <p class="text-muted small">15 role-specific questions are generated fresh for every session using a large language model.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.3rem;font-weight:700;">3</div>
+                <h5>Answer in 30 Minutes</h5>
+                <p class="text-muted small">You have 30 minutes to answer all questions, just like a real timed technical interview.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.3rem;font-weight:700;">4</div>
+                <h5>Get Feedback</h5>
+                <p class="text-muted small">Every answer gets scored and broken down into strengths, weaknesses, and specific improvements.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="mb-5">
+        <h2 class="fw-bold text-center mb-5">Built With</h2>
+        <div class="row justify-content-center g-3">
+            {% for tech in techs %}
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="card text-center p-3 h-100">
+                    <i class="{{ tech.icon }} mb-2" style="font-size:2rem; color: {{ tech.color }};"></i>
+                    <p class="mb-0 fw-bold small">{{ tech.name }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-primary rounded-3 p-5 text-center text-white">
+        <h2 class="fw-bold mb-3">Ready to Practice?</h2>
+        <p class="mb-4">Pick a role and start your mock interview now.</p>
+        <a href="{% url 'home' %}" class="btn btn-light btn-lg px-4">Start Practicing</a>
+    </div>
+
+</div>
+
+<style>
+.mb-6 { margin-bottom: 5rem; }
+</style>
+{% endblock %}

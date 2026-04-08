@@ -2,6 +2,7 @@ from django.test import TestCase
 from unittest.mock import patch
 from .ai_engine import ai_evaluate_answer
 
+
 class AiEngineTests(TestCase):
 
     @patch("interview.ai_engine.openai.ChatCompletion.create")

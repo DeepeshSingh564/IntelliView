@@ -32,7 +32,7 @@ Be specific to the question asked. Do not give generic feedback."""
             GROQ_API_URL,
             headers={
                 "Authorization": f"Bearer {GROQ_API_KEY}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": MODEL_NAME,
@@ -40,7 +40,7 @@ Be specific to the question asked. Do not give generic feedback."""
                 "temperature": 0.3,
                 "max_tokens": 400,
             },
-            timeout=30
+            timeout=30,
         )
 
         response.raise_for_status()
@@ -60,7 +60,7 @@ Be specific to the question asked. Do not give generic feedback."""
             "strengths": result.get("strengths", []),
             "weaknesses": result.get("weaknesses", []),
             "improvements": result.get("improvements", []),
-            "raw": content
+            "raw": content,
         }
 
     except json.JSONDecodeError:
@@ -69,8 +69,10 @@ Be specific to the question asked. Do not give generic feedback."""
             "score": 5,
             "strengths": [],
             "weaknesses": [],
-            "improvements": [content if 'content' in dir() else "Could not parse AI response."],
-            "raw": ""
+            "improvements": [
+                content if "content" in dir() else "Could not parse AI response."
+            ],
+            "raw": "",
         }
     except Exception as e:
         return _fallback_response(str(e))
@@ -82,9 +84,8 @@ def _fallback_response(reason: str):
         "weaknesses": ["AI feedback temporarily unavailable."],
         "improvements": ["Please try again in a moment."],
         "score": 0,
-        "raw": reason
+        "raw": reason,
     }
-
 
 
 def ai_generate_questions(role_name: str, count: int = 10):
@@ -109,7 +110,7 @@ Mix difficulties. Make questions specific and technical."""
             GROQ_API_URL,
             headers={
                 "Authorization": f"Bearer {GROQ_API_KEY}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             json={
                 "model": MODEL_NAME,
@@ -117,7 +118,7 @@ Mix difficulties. Make questions specific and technical."""
                 "temperature": 0.7,
                 "max_tokens": 2000,
             },
-            timeout=30
+            timeout=30,
         )
         response.raise_for_status()
         content = response.json()["choices"][0]["message"]["content"].strip()

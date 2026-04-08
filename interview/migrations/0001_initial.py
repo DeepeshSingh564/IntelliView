@@ -9,63 +9,133 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Role',
+            name="Role",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('slug', models.SlugField(unique=True)),
-                ('description', models.TextField(blank=True)),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                ("slug", models.SlugField(unique=True)),
+                ("description", models.TextField(blank=True)),
+                ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
             ],
             options={
-                'ordering': ['name'],
+                "ordering": ["name"],
             },
         ),
         migrations.CreateModel(
-            name='Question',
+            name="Question",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('text', models.TextField()),
-                ('difficulty', models.CharField(choices=[('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')], default='medium', max_length=10)),
-                ('keywords', models.JSONField(blank=True, default=list)),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
-                ('role', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='questions', to='interview.role')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("text", models.TextField()),
+                (
+                    "difficulty",
+                    models.CharField(
+                        choices=[
+                            ("easy", "Easy"),
+                            ("medium", "Medium"),
+                            ("hard", "Hard"),
+                        ],
+                        default="medium",
+                        max_length=10,
+                    ),
+                ),
+                ("keywords", models.JSONField(blank=True, default=list)),
+                ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "role",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="questions",
+                        to="interview.role",
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-created_at'],
+                "ordering": ["-created_at"],
             },
         ),
         migrations.CreateModel(
-            name='Session',
+            name="Session",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('user_session', models.CharField(max_length=100, unique=True)),
-                ('started_at', models.DateTimeField(default=django.utils.timezone.now)),
-                ('ended_at', models.DateTimeField(blank=True, null=True)),
-                ('role', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='sessions', to='interview.role')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("user_session", models.CharField(max_length=100, unique=True)),
+                ("started_at", models.DateTimeField(default=django.utils.timezone.now)),
+                ("ended_at", models.DateTimeField(blank=True, null=True)),
+                (
+                    "role",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="sessions",
+                        to="interview.role",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Attempt',
+            name="Attempt",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('user_session', models.CharField(max_length=100)),
-                ('answer_text', models.TextField()),
-                ('feedback_text', models.TextField(blank=True)),
-                ('score', models.IntegerField(default=0)),
-                ('ai_feedback', models.JSONField(blank=True, null=True)),
-                ('raw_ai_response', models.TextField(blank=True)),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
-                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='attempts', to='interview.question')),
-                ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='attempts', to='interview.session')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("user_session", models.CharField(max_length=100)),
+                ("answer_text", models.TextField()),
+                ("feedback_text", models.TextField(blank=True)),
+                ("score", models.IntegerField(default=0)),
+                ("ai_feedback", models.JSONField(blank=True, null=True)),
+                ("raw_ai_response", models.TextField(blank=True)),
+                ("created_at", models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "question",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="attempts",
+                        to="interview.question",
+                    ),
+                ),
+                (
+                    "session",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="attempts",
+                        to="interview.session",
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-created_at'],
+                "ordering": ["-created_at"],
             },
         ),
     ]
